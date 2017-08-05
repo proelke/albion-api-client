@@ -1,0 +1,17 @@
+*.bak
+*.egg
+*.egg-info/
+*.eggs/
+*.pyc
+*.pyproj
+*.sln
+*.vs/
+*~
+.DS_Store
+.cache/
+.coverage
+.idea/
+.tox/
+_build/
+build/
+dist/
