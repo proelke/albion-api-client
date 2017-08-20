@@ -9,11 +9,11 @@ from os import path
 here = path.abspath(path.dirname(__file__))
 
 # Get the long description from the README file
-with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
+with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='albion_api_client',
+    name='albion-api-client',
     version='0.1.0',
     description='An API client for Albion Online written in Python.',
     long_description=long_description,
@@ -32,7 +32,7 @@ setup(
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
     ],
-    keywords='api ablion online',
+    keywords=['api', 'ablion', 'online'],
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
     install_requires=['requests'],
 )

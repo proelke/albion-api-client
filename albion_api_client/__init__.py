@@ -1,1 +1,1 @@
-from .client import API # NOQA
+from .client import AlbionAPI # NOQA
