@@ -34,7 +34,7 @@ class AlbionAPI(object):
             player_id=player_id)), params=params).json()
 
     def get_player_death(self, player_id):
-        return requests.get(self._url('/players/{player_id}/death'.format(
+        return requests.get(self._url('/players/{player_id}/deaths'.format(
             player_id=player_id))).json()
 
     def get_guild_id(self, guild_name):
