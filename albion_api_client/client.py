@@ -1,3 +1,4 @@
+import json
 import requests
 
 
@@ -76,9 +77,16 @@ class AlbionAPI(object):
 
     def get_server_status(self, server='live'):
         if server == 'live' or server == 'staging':
-            return requests.get(
-                'http://{server}.albiononline.com/status.txt'.format(
-                    server=server)).json()
+            try:
+                return requests.get(
+                    'http://{server}.albiononline.com/status.txt'.format(
+                        server=server)).json()
+            # Adding a hack to catch invalid json returned from the API
+            except json.decoder.JSONDecodeError:
+                response = requests.get(
+                    'http://{server}.albiononline.com/status.txt'.format(
+                        server=server))
+                return json.loads(response.text[3:])
 
     def get_event(self, event_id):
         return requests.get(self._url('/events/{event_id}'.format(

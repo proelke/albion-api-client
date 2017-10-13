@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='albion-api-client',
-    version='0.1.1',
+    version='0.1.2',
     description='An API client for Albion Online written in Python.',
     url='https://github.com/proelke/albion-api-client',
     author='Patrick Roelke',
